@@ -37,13 +37,12 @@ def main():
 
     # Start the Bot
     updater.start_polling()
-   app = Client(
+   Client(
            "mybots", 
             bot_token=os.environ.get("TOKEN"), 
             api_id=os.environ.get("api_id"), 
             api_hash=os.environ.get("api_hash"), 
-            plugins=plugins)
-   app.run()
+            plugins=plugins).run()
     updater.idle()
 
 
