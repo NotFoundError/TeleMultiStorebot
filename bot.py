@@ -1,3 +1,4 @@
+import os
 from pyrogram import Client, Filters
 import logging, os
 from telegram import InlineQueryResultArticle, ParseMode, \
