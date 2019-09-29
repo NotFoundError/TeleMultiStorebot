@@ -43,7 +43,7 @@ def main():
     updater.start_polling()
    app = pyrogram.Client(
         "AnyDLBot",
-        bot_token=Config.TG_BOT_TOKEN,
+        bot_token=Config.TOKEN,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
         plugins=plugins
