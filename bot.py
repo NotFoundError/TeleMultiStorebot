@@ -48,7 +48,6 @@ def main():
         api_hash=Config.API_HASH,
         plugins=plugins
     )
-    app.DOWNLOAD_WORKERS = 4
     app.run()
     updater.idle()
 
