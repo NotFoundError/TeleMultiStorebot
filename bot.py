@@ -41,7 +41,15 @@ def main():
 
     # Start the Bot
     updater.start_polling()
-   Client("mybots", bot_token=Config.TOKEN, api_id=Config.APP_ID, api_hash=Config.API_HASH, plugins=plugins).run()
+   app = pyrogram.Client(
+        "AnyDLBot",
+        bot_token=Config.TG_BOT_TOKEN,
+        api_id=Config.APP_ID,
+        api_hash=Config.API_HASH,
+        plugins=plugins
+    )
+    app.DOWNLOAD_WORKERS = 4
+    app.run()
     updater.idle()
 
 
